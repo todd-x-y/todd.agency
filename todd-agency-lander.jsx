@@ -1,0 +1,305 @@
+import React, { useState } from 'react';
+
+const ToddAgency = () => {
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [formSubmitted, setFormSubmitted] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setFormSubmitted(true);
+  };
+
+  return (
+    <div className="min-h-screen bg-zinc-50 text-zinc-700 font-sans">
+      {/* Navigation */}
+      <nav className="fixed top-0 w-full bg-zinc-50/95 backdrop-blur-sm z-50 border-b border-zinc-200">
+        <div className="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
+          <span className="text-lg font-medium text-zinc-900">todd.agency</span>
+          <div className="flex gap-6 text-sm">
+            <a href="#approach" className="text-zinc-500 hover:text-sky-600 transition-colors">Approach</a>
+            <a href="#engage" className="text-zinc-500 hover:text-sky-600 transition-colors">Work Together</a>
+            <a href="#contact" className="text-zinc-500 hover:text-sky-600 transition-colors">Contact</a>
+          </div>
+        </div>
+      </nav>
+
+      {/* Hero */}
+      <section className="pt-32 pb-20 px-6">
+        <div className="max-w-3xl mx-auto">
+          <p className="text-sky-600 text-sm font-medium mb-4 tracking-wide uppercase">Data Engineering + Information Systems</p>
+          <h1 className="text-4xl md:text-5xl font-light text-zinc-900 leading-tight mb-6">
+            When your tools stop serving your team, coordination breaks down.
+          </h1>
+          <p className="text-xl text-zinc-500 leading-relaxed mb-8">
+            I help organizations make complex operations visible and actionable. Through rapid prototyping, 
+            abstract coordination needs become tangible systems you can test, refine, and trust.
+          </p>
+          <div className="flex flex-wrap gap-4">
+            <a 
+              href="#engage" 
+              className="px-6 py-3 bg-sky-600 text-white rounded-lg hover:bg-sky-700 transition-colors"
+            >
+              Explore Working Together
+            </a>
+            <a 
+              href="#approach" 
+              className="px-6 py-3 border border-zinc-300 text-zinc-700 rounded-lg hover:border-sky-600 hover:text-sky-600 transition-colors"
+            >
+              Learn My Approach
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Problem Section */}
+      <section className="py-20 px-6 bg-gradient-to-b from-zinc-100 to-zinc-50">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-2xl font-light text-zinc-900 mb-8">The patterns I notice</h2>
+          <div className="space-y-6 text-zinc-600 leading-relaxed">
+            <p>
+              Communication breakdowns signal that a tool is not solving the problem it was designed to serve. 
+              Data silos emerge when teams face challenges cooperating. These are symptoms of deeper misalignment 
+              between how work actually happens and how systems expect it to happen.
+            </p>
+            <p>
+              Many business leaders have strong intuition around technology failure. The question becomes: 
+              how do we either replace a tool with something that better serves the organization, or 
+              reorganize ourselves to better understand the process that tool is meant to support?
+            </p>
+            <p>
+              The answer begins with visibility. When people can see how their activities affect shared resources, 
+              when the relationship between contribution and outcome becomes legible, genuine collaboration emerges.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Approach Section */}
+      <section id="approach" className="py-20 px-6">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-2xl font-light text-zinc-900 mb-4">How I work</h2>
+          <p className="text-zinc-500 mb-12 leading-relaxed">
+            I begin by understanding how people naturally work together, then create technology that enhances 
+            these existing patterns rather than forcing new ones.
+          </p>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="p-6 bg-white rounded-xl border border-zinc-200">
+              <div className="w-10 h-10 bg-sky-600 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-medium text-zinc-900 mb-2">Discovery Through Dialogue</h3>
+              <p className="text-zinc-500 text-sm leading-relaxed">
+                I talk with each stakeholder to understand their needs and requirements. By gaining full context 
+                of a workflow, we design tools that are intuitive for everyone, where the value being delivered 
+                is clear to both users and leadership.
+              </p>
+            </div>
+
+            <div className="p-6 bg-white rounded-xl border border-zinc-200">
+              <div className="w-10 h-10 bg-sky-600 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-medium text-zinc-900 mb-2">Rapid Prototyping</h3>
+              <p className="text-zinc-500 text-sm leading-relaxed">
+                I use low-code platforms to build functional prototypes in days, not months. This tightens 
+                the time between requirements gathering and tool building, allowing us to quickly identify 
+                and build on value within the organization.
+              </p>
+            </div>
+
+            <div className="p-6 bg-white rounded-xl border border-zinc-200">
+              <div className="w-10 h-10 bg-sky-600 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-medium text-zinc-900 mb-2">Translation Work</h3>
+              <p className="text-zinc-500 text-sm leading-relaxed">
+                I bridge the vocabulary of software development with accessible language that centers technology 
+                in meaningful day-to-day interactions. I help non-technical people articulate their needs 
+                by using their language while introducing relevant industry concepts.
+              </p>
+            </div>
+
+            <div className="p-6 bg-white rounded-xl border border-zinc-200">
+              <div className="w-10 h-10 bg-sky-600 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-medium text-zinc-900 mb-2">Extensible Foundations</h3>
+              <p className="text-zinc-500 text-sm leading-relaxed">
+                Prototypes become design assets: blueprints, data models, and architectural documents that 
+                describe needed tools in ways that enable building more robust, long-term systems when 
+                the time is right.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Philosophy Note */}
+      <section className="py-16 px-6 bg-sky-700 text-white">
+        <div className="max-w-3xl mx-auto text-center">
+          <p className="text-xl font-light leading-relaxed">
+            "That which coordinates should be comprehensible to those being coordinated."
+          </p>
+          <p className="text-sm mt-4 text-sky-200">
+            When we make information flows visible and decision-making transparent, 
+            we create possibilities for more effective and equitable relationships.
+          </p>
+        </div>
+      </section>
+
+      {/* Engagement Section */}
+      <section id="engage" className="py-20 px-6">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-2xl font-light text-zinc-900 mb-4">Working together</h2>
+          <p className="text-zinc-500 mb-12 leading-relaxed">
+            I work with inspired entrepreneurs, business leaders, and others with ideas to quickly develop 
+            concepts into practical digital tools. Engagements range from focused 30-day prototyping sprints 
+            to 90-day comprehensive design processes.
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <div className="p-6 bg-sky-50 rounded-xl border border-sky-100">
+              <h3 className="text-lg font-medium text-zinc-900 mb-3">30-Day Sprint</h3>
+              <p className="text-zinc-500 text-sm mb-4 leading-relaxed">
+                Discovery and build sessions in co-creation with stakeholders. Alpha version features 
+                emphasizing value return in days. Initial functional prototype ready for review.
+              </p>
+              <p className="text-sky-600 font-medium">From $6,250</p>
+            </div>
+
+            <div className="p-6 bg-sky-50 rounded-xl border border-sky-100">
+              <h3 className="text-lg font-medium text-zinc-900 mb-3">90-Day Process</h3>
+              <p className="text-zinc-500 text-sm mb-4 leading-relaxed">
+                Multiple feedback cycles developing features across workflows. Supporting documentation 
+                including design assets, data models, and knowledge bases for ongoing use.
+              </p>
+              <p className="text-sky-600 font-medium">Custom scope</p>
+            </div>
+          </div>
+
+          <div className="flex flex-wrap gap-4 justify-center">
+            <a 
+              href="#" 
+              className="px-6 py-3 bg-sky-600 text-white rounded-lg hover:bg-sky-700 transition-colors"
+            >
+              View Rate Card
+            </a>
+            <a 
+              href="#" 
+              className="px-6 py-3 border border-sky-600 text-sky-600 rounded-lg hover:bg-sky-50 transition-colors"
+            >
+              Book a Conversation
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Background */}
+      <section className="py-20 px-6 bg-zinc-100">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-2xl font-light text-zinc-900 mb-8">Background</h2>
+          <div className="space-y-4 text-zinc-600 leading-relaxed">
+            <p>
+              My journey began with computer hardware, understanding how physical components enable virtual 
+              spaces for collaboration. This foundation evolved through years working with identity, security, 
+              and risk management systems in banking, where I witnessed how technical architecture shapes 
+              what relationships become possible.
+            </p>
+            <p>
+              I hold an MBA in IT Management and maintain CISSP certification with planned specialization 
+              in security architecture. My current practice focuses on rapid prototyping through API 
+              orchestration, integrating platforms like GlideApps, Make.com, Claude API, and Supabase.
+            </p>
+            <p>
+              I work with mission-driven organizations, startups, inventors, and communities exploring 
+              alternatives to conventional approaches. The tools I design range from collaborative platforms 
+              to impact tracking dashboards, always with emphasis on clarity and genuine participation.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="py-20 px-6">
+        <div className="max-w-xl mx-auto">
+          <h2 className="text-2xl font-light text-zinc-900 mb-4 text-center">Get in touch</h2>
+          <p className="text-zinc-500 mb-8 text-center">
+            Have a project in mind? Let's explore whether we're a good fit.
+          </p>
+
+          {formSubmitted ? (
+            <div className="p-8 bg-sky-50 rounded-xl text-center">
+              <p className="text-sky-800 font-medium">Thank you for reaching out.</p>
+              <p className="text-sky-600 text-sm mt-2">I'll respond within two business days.</p>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div>
+                <label className="block text-sm text-zinc-700 mb-2">Name</label>
+                <input
+                  type="text"
+                  required
+                  value={formData.name}
+                  onChange={(e) => setFormData({...formData, name: e.target.value})}
+                  className="w-full px-4 py-3 rounded-lg border border-zinc-300 focus:border-sky-500 focus:ring-1 focus:ring-sky-500 outline-none transition-colors bg-white"
+                />
+              </div>
+              <div>
+                <label className="block text-sm text-zinc-700 mb-2">Email</label>
+                <input
+                  type="email"
+                  required
+                  value={formData.email}
+                  onChange={(e) => setFormData({...formData, email: e.target.value})}
+                  className="w-full px-4 py-3 rounded-lg border border-zinc-300 focus:border-sky-500 focus:ring-1 focus:ring-sky-500 outline-none transition-colors bg-white"
+                />
+              </div>
+              <div>
+                <label className="block text-sm text-zinc-700 mb-2">What are you working on?</label>
+                <textarea
+                  rows={4}
+                  required
+                  value={formData.message}
+                  onChange={(e) => setFormData({...formData, message: e.target.value})}
+                  className="w-full px-4 py-3 rounded-lg border border-zinc-300 focus:border-sky-500 focus:ring-1 focus:ring-sky-500 outline-none transition-colors resize-none bg-white"
+                />
+              </div>
+              <button
+                type="submit"
+                className="w-full py-3 bg-sky-600 text-white rounded-lg hover:bg-sky-700 transition-colors"
+              >
+                Send Message
+              </button>
+            </form>
+          )}
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="py-12 px-6 bg-zinc-900 text-zinc-400">
+        <div className="max-w-3xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+          <div>
+            <span className="text-white font-medium">todd.agency</span>
+            <p className="text-sm mt-1">Data Engineering + Information Systems</p>
+            <p className="text-sm">Denver, Colorado</p>
+          </div>
+          <div className="flex gap-6 text-sm">
+            <a href="mailto:todd.y@ieee.org" className="hover:text-sky-400 transition-colors">todd.y@ieee.org</a>
+            <a href="https://linkedin.com/in/todd-y" className="hover:text-sky-400 transition-colors">LinkedIn</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+};
+
+export default ToddAgency;
